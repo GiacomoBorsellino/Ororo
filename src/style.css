@@ -1,0 +1,551 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*FONT*/
+@font-face {
+    font-family: Montserrat;
+    src: url(./font/Montserrat-Medium.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* BACKGROUND */
+body {
+    background: url(./images/background.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+
+    font-family: Montserrat;
+    color: white;
+}
+
+/* FIRST BLOCK */
+.details {
+    display: flex;
+    flex-direction: column;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -135px;
+    width: 270px;
+    height: 300px;
+    justify-content: space-around;
+    text-align: center;
+    line-height: 230%;
+    
+    background-color: rgba(48,22,33,255);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    filter: drop-shadow(0.1rem 0.1rem 0.1rem#2b2a2a);
+    z-index: 1;
+}
+
+.details ul {
+    list-style-type:none
+}
+
+.details ul img {
+    margin-top: 10%;
+    width: 25px;
+}
+
+.details ul img:hover {
+    width: 27px;
+}
+
+.firstBlock {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.logo {
+    width: 13rem;
+    align-self: center;
+    margin-top: 45px;
+    margin-bottom: 15px;
+}
+
+div p {
+    margin: 0.1rem;
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: rgba(48,22,33,255);
+    padding: 1rem;
+}
+
+.state {
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    margin: 3px 100px 3px;
+    text-align: center;
+}
+
+/* DESCRIPTION */
+div p:last-child {
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    margin: 1rem 1rem 1rem;
+    padding: 0.7rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* SEARCH */
+.search {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0px 10px;
+}
+
+.search input {
+    height: 3rem;   
+    border: none;
+    border-radius: 50px;
+    margin: 10px;
+    text-align: center;
+    font-family: Montserrat;
+}
+
+.search input:hover {
+    filter: drop-shadow(0.1rem 0.1rem 0.1rem#2e2e2e);
+}
+
+.search input:focus {
+    outline: none;
+}
+
+.search input::placeholder {
+    text-align: center;
+}
+
+.search img {
+    width: 3rem;   
+    margin: 10px;
+}
+
+.search img:hover {
+    filter: drop-shadow(0.1rem 0.1rem 0.1rem#2e2e2e);
+}
+
+.gpsButton {
+    display: flex;
+    position: fixed;
+    left: 20px;
+    top: 20px;
+}
+
+.gpsButton img {
+    width: 3rem;   
+}
+
+.gpsButton:hover {
+    filter: drop-shadow(0.1rem 0.1rem 0.1rem#2e2e2e);
+}
+/* DATAS */
+.datas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-top: 1px solid white;
+    margin: 1rem 1.3rem;
+}
+
+.secondBlock {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 1rem;
+    list-style-type: none;
+    color: rgba(48,22,33,255);
+}
+
+.secondBlock li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 5.5rem;
+    height: 5.5rem;
+
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    padding: 10px;
+    margin: 0.5rem;
+    font-size: 0.7rem;
+    font-weight: 800;
+}
+
+.secondBlock li:hover {
+    filter: drop-shadow(0.1rem 0.1rem 0.1rem#a89d9d);
+}
+
+.secondBlock li img {
+    margin: auto;
+    width: 2.5rem;
+}
+
+/* MEDIA QUERY MOBILE 2 */
+@media only screen and (max-width: 320px) {
+.secondBlock li {
+    width: 5rem;
+    height: 5rem;
+
+    padding: 10px;
+    margin: 0.2rem;
+    font-size: 0.6rem;
+    font-weight: 800;
+}
+
+.secondBlock li img {
+    width: 2.2rem;
+}
+
+div p:last-child {
+    font-size: 0.7rem;
+    margin: 0.7rem 0.7rem 0.7rem;
+    padding: 0.5rem;
+}
+}
+
+/* MEDIA QUERY MOBILE 3 */
+@media only screen and (max-width: 361px) {
+.logo {
+    width: 10rem;
+}
+
+div p {
+    margin: 0.1rem;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: rgba(48,22,33,255);
+    padding: 0.2rem;
+}
+
+.search input {
+    height: 2rem;   
+}
+
+.search img {
+    width: 2rem;   
+}
+
+.gpsButton img {
+    width: 2rem;   
+}
+}
+
+/* MEDIA QUERY TABLET */
+@media only screen and (min-width: 768px) {
+.details {
+    margin-top: -160px;
+    margin-left: -200px;
+    width: 400px;
+    height: 320px;
+    line-height: 250%;
+    padding: 10px;
+}
+
+.details ul img {
+    margin-top: 3%;
+}
+
+.logo {
+    width: 15rem;
+    margin-top: 55px;
+    margin-bottom: 25px;
+}
+
+.search {
+    margin: 10px 5px;
+}
+
+.search input {
+    width: 25rem; 
+}
+
+div p {
+    margin: 0.4rem;
+    font-size: 1.7rem;
+    padding: 0.4rem;
+}
+
+.state {
+    margin: 3px 300px 3px;
+}
+
+div p:last-child {
+    font-size: 1.5rem;
+    margin: 2rem 3rem 1rem;
+    padding: 1rem;
+}
+
+.datas {
+    margin: 1rem 3rem;
+}
+
+.secondBlock li {
+    width: 7rem;
+    height: 7rem;
+    padding: 10px 0px 15px;
+    margin: 1rem;
+    font-size: 0.9rem;
+}
+
+.secondBlock li img {
+    width: 2.9rem;
+}
+}
+
+/* MEDIA QUERY iPAD PRO */
+@media only screen and (min-width: 1024px) {
+.logo {
+    width: 19rem;
+    margin-top: 55px;
+    margin-bottom: 25px;
+}
+
+.search {
+    margin: 10px 5px;
+}
+
+.search input {
+    width: 35rem; 
+}
+
+div p {
+    margin: 0.4rem;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.state {
+    margin: 3px 400px 3px;
+}
+
+div p:last-child {
+    font-size: 1.9rem;
+    margin: 2rem 3rem 1rem;
+    padding: 1rem;
+}
+
+.datas {
+    margin: 1rem 4rem;
+}
+
+.secondBlock li {
+    width: 12rem;
+    height: 12rem;
+    padding: 6px 0px 15px;
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+
+.secondBlock li img {
+    width: 6rem;
+}
+}
+
+/* MEDIA QUERY DESKTOP */
+@media only screen and (min-width: 1364px) {
+.logo {
+    width: 17rem;
+    margin-top: 55px;
+    margin-bottom: 25px;
+}
+
+.search {
+    margin: 10px 5px;
+}
+
+.search input {
+    width: 35rem; 
+}
+
+div p {
+    margin: 0.2rem;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
+.state {
+    margin: 3px 610px 3px;
+}
+
+div p:last-child {
+    font-size: 1rem;
+    margin: 2rem 13rem 1rem;
+    padding: 0.7rem;
+}
+
+.datas {
+    margin: 0.5rem 7rem;
+}
+
+.secondBlock li {
+    width: 7rem;
+    height: 7rem;
+    padding: 3px 0px 15px;
+    margin: 0.5rem 1.2rem;
+    font-size: 0.7rem;
+}
+
+.secondBlock li img {
+    width: 3.5rem;
+}
+}
+
+/* MEDIA QUERY FULL HD */
+@media only screen and (min-width: 1920px) {
+.logo {
+    width: 25rem;
+    margin-top: 65px;
+    margin-bottom: 25px;
+}
+
+.search {
+    margin: 10px 10px;
+}
+
+.search input {
+    width: 45rem; 
+}
+
+div p {
+    margin: 0.5rem;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.state {
+    margin: 3px 800px 3px;
+}
+
+div p:last-child {
+    font-size: 1.6rem;
+    margin: 2rem 30rem 1rem;
+    padding: 1.5rem;
+}
+
+.datas {
+    margin: 1rem 10rem;
+}
+
+.secondBlock li {
+    width: 10rem;
+    height: 10rem;
+    padding: 4px 0px 15px;
+    margin: 0.5rem 2rem;
+    font-size: 1.2rem;
+}
+
+.secondBlock li img {
+    width: 5rem;
+}
+
+.search input {
+    height: 4rem;   
+    border: none;
+    border-radius: 50px;
+    margin: 10px;
+    text-align: center;
+    font-family: Montserrat;
+}
+
+.search img {
+    width: 4rem;   
+    margin: 10px;
+}
+
+.gpsButton img {
+    width: 4rem;   
+}
+}
+
+/* MEDIA QUERY 4K */
+@media only screen and (min-width: 3000px) {
+.logo {
+    width: 45rem;
+    margin-top: 90px;
+    margin-bottom: 50px;
+}
+
+.search {
+    margin: 10px 0px;
+}
+
+.search input {
+    width: 75rem; 
+}
+
+div p {
+    margin: 0.5rem;
+    font-size: 5rem;
+    padding: 1rem;
+}
+
+.state {
+    margin: 3px 1700px 3px;
+}
+
+div p:last-child {
+    font-size: 3.5rem;
+    margin: 9rem 55rem 9rem;
+    padding: 1.5rem;
+}
+
+.datas {
+    margin: 5rem 20rem;
+}
+
+.secondBlock li {
+    width: 25rem;
+    height: 25rem;
+    padding: 5px 10px 30px;
+    margin: 10rem 4rem;
+    font-size: 2.5rem;
+}
+
+.secondBlock li img {
+    width: 13rem;
+}
+
+.search input {
+    height: 6rem;   
+    border: none;
+    border-radius: 50px;
+    margin: 10px;
+    text-align: center;
+    font-family: Montserrat;
+}
+
+.search img {
+    width: 6rem;   
+    margin: 10px;
+}
+
+.gpsButton img {
+    width: 6rem;   
+}
+}
