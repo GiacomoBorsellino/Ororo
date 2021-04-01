@@ -15,7 +15,7 @@ module.exports = (env, argv) => {
         main: path.resolve(__dirname, entry),
       },
       output: {
-        filename: "[name].bundle.js",
+        filename: "bundle.js",
         path: path.resolve(__dirname, "dist"),
         // assetModuleFilename: 'images/[hash][ext][query]',
     },
