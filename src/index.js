@@ -379,7 +379,7 @@ gpsButton.onclick = function() {
                                 }
                             )
                     };
-                    console.log(lat, lon);
+                    console.log(lat, lon, "in index.js");
                     geoLocation();
             }  
         );

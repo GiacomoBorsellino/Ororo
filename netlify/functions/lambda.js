@@ -385,7 +385,7 @@ gpsButton.onclick = function() {
                                 }
                             )
                     };
-                    console.log(lat, lon);
+                    console.log(lat, lon, "in lambda.js");
                     geoLocation();
             }  
         );
