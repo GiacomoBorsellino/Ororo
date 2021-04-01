@@ -99,9 +99,9 @@ div p:last-child {
     background-color: white;
     border: none;
     border-radius: 10px;
-    font-size: 1rem;
-    margin: 1rem 1rem 1rem;
-    padding: 0.7rem;
+    font-size: 0.6rem;
+    margin: 0.6rem 0.6rem 0.6rem;
+    padding: 0.6rem;
 }
 
 .container {
