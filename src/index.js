@@ -47,7 +47,7 @@ async function checkAir() {
 let cityName = document.getElementById("cityName").value; // Valore casella ricerca I
 
 // Chiamata API AICQN
-await fetch(`/.netlify/functions/lambda`)
+await fetch(`https://api.waqi.info/feed/${cityName}/?token=${apiKey}`)
     .then(
         response => response.json()
     )
@@ -145,7 +145,7 @@ await fetch(`/.netlify/functions/lambda`)
     )
     
 // Chiamata API OpenWeather
-await fetch(`/.netlify/functions/lambda`)
+await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiMeteo}`)
         .then(
             response => response.json()
         )
@@ -232,7 +232,7 @@ gpsButton.onclick = function() {
                     let lat = position.coords.latitude;
                     let lon = position.coords.longitude;
                     async function geoLocation() {
-                    await fetch(`/.netlify/functions/lambda`)
+                    await fetch(`https://api.waqi.info/feed/geo:${lon};${lat}/?token=${apiKey}`)
                             .then(
                                 response => response.json()
                             )
@@ -325,7 +325,7 @@ gpsButton.onclick = function() {
 
 
                     // Chiamata API OpenWeather
-                    await fetch(`/.netlify/functions/lambda`)
+                    await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiMeteo}`)
                             .then(
                                 response => response.json()
                             )
