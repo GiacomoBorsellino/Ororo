@@ -1,7 +1,6 @@
 exports.handler = async event => {
-// Più tardi imposteremo una variabile d'ambiente interna a Netlify stesso, accessibile semplicemente così:
-const apiKey =  process.env.apiKey;
-const apiMeteo = process.env.apiMeteo;
+    // Più tardi imposteremo una variabile d'ambiente interna a Netlify stesso, accessibile semplicemente così:
+    const API_KEY =  process.env.API_KEY
   
 // qui facciamo la chiamata alla API esattamente come la facevamo prima in index_dev.js
 // Import elements
@@ -385,7 +384,7 @@ gpsButton.onclick = function() {
                                 }
                             )
                     };
-                    console.log(lat, lon, "in lambda.js");
+                    console.log(lat, lon);
                     geoLocation();
             }  
         );
