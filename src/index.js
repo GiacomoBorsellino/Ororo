@@ -145,7 +145,7 @@ await fetch(`https://api.waqi.info/feed/${cityName}/?token=${apiKey}`)
     )
     
 // Chiamata API OpenWeather
-await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiMeteo}`)
+await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiMeteo}`)
         .then(
             response => response.json()
         )
