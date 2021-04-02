@@ -16,7 +16,7 @@ import temp from './images/temp.png';
 import visibilit from './images/visibility.png';
 import win from './images/wind.png';
 import x from './images/x.png';
-
+console.log("Lambda Rulez");
 
 // Pannelli descrittivi
 let sky = document.body.getElementsByClassName("sky")[0];
