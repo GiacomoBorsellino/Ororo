@@ -20,5 +20,16 @@
     "style-loader": "^2.0.0",
     "webpack": "^5.28.0",
     "webpack-cli": "^4.6.0"
-  }
+  },
+  "dependencies": {
+    "netlify-lambda": "^2.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GiacomoBorsellino/Ororo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GiacomoBorsellino/Ororo/issues"
+  },
+  "homepage": "https://github.com/GiacomoBorsellino/Ororo#readme"
 }

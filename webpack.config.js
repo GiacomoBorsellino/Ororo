@@ -45,7 +45,7 @@ module.exports = (env, argv) => {
     },
     // Configurazione di un plugin, necessario per sveltire il processo di sviluppo vedi asterischi nello snippet successivo **
     devServer: {
-      contentBase: './dist',
+      contentBase: './build',
       open: true
     },
     // Plugin per minificare pagine html

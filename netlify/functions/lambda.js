@@ -1,8 +1,5 @@
 exports.handler = async event => {
     // Più tardi imposteremo una variabile d'ambiente interna a Netlify stesso, accessibile semplicemente così:
-    const API_KEY =  process.env.API_KEY
-  
-// qui facciamo la chiamata alla API esattamente come la facevamo prima in index_dev.js
 // Import elements
 import "./style.css";
 
@@ -150,7 +147,7 @@ await fetch(`https://api.waqi.info/feed/${cityName}/?token=${apiKey}`)
     )
     
 // Chiamata API OpenWeather
-await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiMeteo}`)
+await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiMeteo}`)
         .then(
             response => response.json()
         )
@@ -400,7 +397,10 @@ info.onclick = function() {
 
 exit.onclick = function() {
     document.body.getElementsByClassName("details")[0].style.display = "none";
-}
+}  
+    // qui facciamo la chiamata alla API esattamente come la facevamo prima in index_dev.js
+    const response = await fetch(`endpoint/parameters&API_KEY=${API_KEY}`)
+    const data = await response.json() 
   
     // da qui in giù la funzione fa da back-end: elaboriamo dei dati e li rimandiamo al front-end in formato JSON con uno statusCode 200, cioè "successo".
     const pass = (body) => {
