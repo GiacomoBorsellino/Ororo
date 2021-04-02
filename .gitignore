@@ -105,3 +105,7 @@ typings/
 
 # Netlify
 .netlify/
+
+*.index_dev.js
+
+
