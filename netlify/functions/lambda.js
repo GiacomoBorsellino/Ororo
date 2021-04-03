@@ -1,14 +1,16 @@
 exports.handler = async () => {
   const apiKey =  process.env.apiKey
 
-  const response = {apiKey: apiKey}
+  const response = await fetch(`https://api.waqi.info/feed/${cityName}/?token=${apiKey}`);
+  const result = await response.json(); 
 
-  const pass = (data) => {
+
+  const pass = (body) => {
     return {
       statusCode: 200,
-      body: JSON.stringify(data)
+      body: JSON.stringify(body)
     }
   }
 
-  return pass(response)
+  return pass(result)
 }
