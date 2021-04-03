@@ -10,5 +10,6 @@
       body: JSON.stringify(result)
     }
   }
-  return pass(response)
+  let b = 5
+  return b;
 }
