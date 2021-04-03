@@ -1,11 +1,12 @@
 exports.handler = async event => {
-  const apiKey =  process.env.apiKey
+  // Più tardi imposteremo una variabile d'ambiente interna a Netlify stesso, accessibile semplicemente così:
+  const apiKey = process.env.apiKey;
 
-  const fet = await fetch(`https://api.waqi.info/feed/${cityName}/?token=${apiKey}`)
-  const response = await fet.json() 
+  // qui facciamo la chiamata alla API esattamente come la facevamo prima in index_dev.js
+  const response = await fetch(`https://api.waqi.info/feed/${cityName}/?token=${apiKey}`)
+  const data = await response.json() 
 
-  // La funzione fa da back-end: elaboriamo dei dati e li rimandiamo al front-end in formato JSON
-  // con uno statusCode 200, cioè "successo".
+  // da qui in giù la funzione fa da back-end: elaboriamo dei dati e li rimandiamo al front-end in formato JSON con uno statusCode 200, cioè "successo".
   const pass = (body) => {
     return {
       statusCode: 200,
@@ -13,5 +14,5 @@ exports.handler = async event => {
     }
   }
 
-  return pass(result)
+  return pass(data)
 }
