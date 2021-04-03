@@ -43,10 +43,10 @@ let cityName = document.getElementById("cityName").value; // Valore casella rice
 
 // Chiamata API AICQN
 const response = await fetch("/.netlify/functions/lambda")
-const data = await response.json()
+const result = await response.json()
 
 console.log("res" + response) // Facciamo ciò che vogliamo coi dati ottenuti
-console.log("dat" + data)
+console.log("dat" + result)
 }
 /*
 .then(
