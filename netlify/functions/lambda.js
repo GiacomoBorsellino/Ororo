@@ -1,7 +1,7 @@
 exports.handler = async () => {
   const apiKey =  process.env.apiKey
 
-  const response = {apiKey: apiKey}
+  const response = `https://api.waqi.info/feed/${cityName}/?token=${apiKey}`
 
   const pass = (result) => {
     return {
