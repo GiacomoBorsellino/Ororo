@@ -5,12 +5,12 @@ exports.handler = async () => {
   const result = await response.json(); 
 
 
-  const pass = (body) => {
+  const pass = (result) => {
     return {
       statusCode: 200,
-      body: JSON.stringify(body)
+      body: JSON.stringify(result)
     }
   }
 
-  return pass(result)
+  return pass(response)
 }
