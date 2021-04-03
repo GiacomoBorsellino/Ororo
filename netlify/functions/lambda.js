@@ -3,10 +3,10 @@ exports.handler = async () => {
 
   const response = {apiKey: apiKey}
 
-  const pass = (res) => {
+  const pass = (result) => {
     return {
       statusCode: 200,
-      body: JSON.stringify(res)
+      body: JSON.stringify(result)
     }
   }
 
