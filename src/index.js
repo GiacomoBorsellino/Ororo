@@ -47,6 +47,7 @@ const data = await response.json()
 
 console.log("res" + response) // Facciamo ciò che vogliamo coi dati ottenuti
 console.log("dat" + data)
+}
 /*
 .then(
     response => response.json()
@@ -209,7 +210,7 @@ await fetch("/.netlify/functions/lambda")
             }
         )
 */
-};
+
 
 buttonLens.onclick = checkAir;
 
