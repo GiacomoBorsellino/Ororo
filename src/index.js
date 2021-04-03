@@ -47,7 +47,7 @@ const result = await response.json()
 
 console.log("res" + response) // Facciamo ciò che vogliamo coi dati ottenuti
 console.log("dat" + result)
-console.log(b);
+console.log(b)
 }
 /*
 .then(
