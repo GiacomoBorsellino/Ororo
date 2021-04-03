@@ -44,8 +44,7 @@ let cityName = document.getElementById("cityName").value; // Valore casella rice
 // Chiamata API AICQN
 const response = await fetch("/.netlify/functions/lambda")
 const result = await response.json()
-    .then(
-        result => {
+
             console.log(result.data.iaqi.pm10.v)
             console.log(result.data.iaqi)
 
@@ -117,10 +116,8 @@ const result = await response.json()
                 description.innerHTML = `State air quality of the city not found, if you want know the air quality 
                 of the location nearest to you, please, click the gps button. If the problem persist, control your internet connection`;
             }
-        }
-    )
-    .catch( 
-        function(error) {
+
+        function errore(error) {
                 console.log(error.name, error.message);
                 document.body.getElementsByClassName("city")[0].innerHTML = `&nbsp;`
 
@@ -135,7 +132,7 @@ const result = await response.json()
                 description.innerHTML = `State air quality of the city not found, if you want know the air quality 
                 of the location nearest to you, please, click the gps button. If the problem persist, control your internet connection`;
         }    
-    )
+
     
 // Chiamata API OpenWeather
 await fetch("/.netlify/functions/lambda")
