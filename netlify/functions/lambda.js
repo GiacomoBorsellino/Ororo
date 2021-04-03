@@ -3,5 +3,12 @@
 
   let fet = await fetch(`https://api.waqi.info/feed/${cityName}/?token=${apiKey}`);
   let result = fet.json();
-    return result
+
+  let pass = function(result) {
+    return {
+      statusCode = 200,
+      body: JSON.stringify(result)
+    }
+  }
+  return pass(response)
 }
