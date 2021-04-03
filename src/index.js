@@ -45,7 +45,7 @@ let cityName = document.getElementById("cityName").value; // Valore casella rice
 const response = await fetch("/.netlify/functions/lambda")
 const data = await response.json()
 
-console.log("Hi" + response) // Facciamo ciò che vogliamo coi dati ottenuti
+console.log("Hi" + data) // Facciamo ciò che vogliamo coi dati ottenuti
 
 .then(
     response => response.json()
