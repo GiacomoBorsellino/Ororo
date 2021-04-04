@@ -1,16 +1,13 @@
-exports.handler = async event => {
+import fetch from "node-fetch";
 
-  const apiKey =  process.env.apiKey
-  
-  const response = await fetch(`https://api.waqi.info/feed/rome/?token=${apiKey}`)
-  const result = await response.json() 
+const API_ENDPOINT = `https://api.waqi.info/feed/rome/?token=${apiKey}`;
 
-  const pass = (body) => {
-    return {
+exports.handler = async (event, context) => {
+  return fetch(API_ENDPOINT)
+    .then(response => response.json())
+    .then(result => ({
       statusCode: 200,
-      body: JSON.stringify(body)
-    }
-  }
-
-  return pass(result)
-}
+      body: JSON.stringify(result)
+    }))
+    .catch(error => ({ statusCode: 422, body: String(error) }));
+};
