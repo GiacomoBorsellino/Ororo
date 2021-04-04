@@ -1,13 +1,13 @@
 import fetch from "node-fetch";
 
-const API_ENDPOINT = `https://api.waqi.info/feed/rome/?token=${apiKey}`;
+const API_ENDPOINT = `https://api.waqi.info/feed/${cityName}/?token=${apiKey}`;
 
 exports.handler = async (event, context) => {
   return fetch(API_ENDPOINT)
     .then(response => response.json())
-    .then(result => ({
+    .then(data => ({
       statusCode: 200,
-      body: JSON.stringify(result)
+      body: `${data}`
     }))
     .catch(error => ({ statusCode: 422, body: String(error) }));
 };
