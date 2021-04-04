@@ -1,7 +1,6 @@
 import fetch from "node-fetch";
 
 const apiKey = process.env.apiKey;
-let cityName = document.getElementById("cityName").value;
 
 const API_ENDPOINT = `https://api.waqi.info/feed/${cityName}/?token=${apiKey}`;
 
