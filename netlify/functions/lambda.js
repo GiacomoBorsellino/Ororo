@@ -1,3 +1,5 @@
+const fetch = require("node-fetch");
+
 exports.handler = async event => {
   const apiKey =  process.env.apiKey
 
