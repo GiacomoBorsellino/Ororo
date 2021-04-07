@@ -5,7 +5,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 // Pulisce cartella dist ad ogni build
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 // Libreria che ci permette di utilizzare le Environment Variables durante lo sviluppo locale
-const Dotenv = require('dotenv-webpack')
+const Dotenv = require('dotenv-webpack');
+// Installa fetch
+const fetch = require("node-fetch");
 
 module.exports = (env, argv) => {
     const entry = argv.mode === 'development' ? './src/index_dev.js' : './src/index.js';
