@@ -47,10 +47,10 @@ async function checkAir() {
 let cityName = document.getElementById("cityName").value; // Valore casella ricerca I
 
 // Chiamata API AICQN
-await fetch("/.netlify/functions/lambda.js")
-    .then(
-        response => response.json()
-    )
+const response = await fetch("/.netlify/functions/lambda")
+const data = await response.json()
+console.log(response)
+console.log(data)
     .then(
         result => {
             console.log(result.data.iaqi.pm10.v)
