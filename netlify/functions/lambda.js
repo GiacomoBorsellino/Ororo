@@ -3,11 +3,9 @@ const fetch = require("node-fetch");
 exports.handler = async event => {
   const apiKey =  process.env.apiKey
 
-  let city = document.getElementById("cityName").value;
+  let cityName = document.getElementById("cityName").value; // Valore casella ricerca I
 
-  // let cityName = document.getElementById("cityName").value; // Valore casella ricerca I
-
-  const response = await fetch(`https://api.waqi.info/feed/${city}/?token=${apiKey}`)
+  const response = await fetch(`https://api.waqi.info/feed/${cityName}/?token=${apiKey}`)
   const data = await response.json() 
 
   const pass = (data) => {
