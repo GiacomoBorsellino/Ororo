@@ -55,6 +55,8 @@ const data = await response.json()
 const result = await data.data.aqi
 // console.log(response)
 console.log(result)
+}
+/*
     .then(
         result => {
             console.log(result.data.iaqi.pm10.v)
@@ -400,3 +402,5 @@ info.onclick = function() {
 exit.onclick = function() {
     document.body.getElementsByClassName("details")[0].style.display = "none";
 }
+
+*/
