@@ -33,6 +33,11 @@ let pm25 = document.body.getElementsByClassName("pm25")[0];
 
 // Variabili di consumo
 let buttonLens = document.body.getElementsByClassName("primer")[0]; // Pulsante di ricerca
+
+// const apiKey = process.env.apiKey;
+// const apiMeteo = process.env.apiMeteo;
+
+
 let state = document.body.getElementsByClassName("state")[0]; // Stato dell'aria O
 let description = document.body.getElementsByClassName("description")[0]; // Descrizione O
 
@@ -42,18 +47,12 @@ async function checkAir() {
 let cityName = document.getElementById("cityName").value; // Valore casella ricerca I
 
 // Chiamata API AICQN
-const response = await fetch("../netlify/functions/lambda.js")
-const data = await response.json()
-
-console.log("response" + response) // Facciamo ciò che vogliamo coi dati ottenuti
-console.log("data" + data)
-}
-/*
-.then(
-    response => response.json()
-)
-.then(
-    result => {
+await fetch("../netlify/functions/lambda.js")
+    .then(
+        response => response.json()
+    )
+    .then(
+        result => {
             console.log(result.data.iaqi.pm10.v)
             console.log(result.data.iaqi)
 
@@ -146,7 +145,7 @@ console.log("data" + data)
     )
     
 // Chiamata API OpenWeather
-await fetch("/.netlify/functions/lambda")
+await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiMeteo}`)
         .then(
             response => response.json()
         )
@@ -209,8 +208,7 @@ await fetch("/.netlify/functions/lambda")
                 }
             }
         )
-*/
-
+};
 
 buttonLens.onclick = checkAir;
 
@@ -234,7 +232,7 @@ gpsButton.onclick = function() {
                     let lat = position.coords.latitude;
                     let lon = position.coords.longitude;
                     async function geoLocation() {
-                    await fetch("/.netlify/functions/lambda")
+                    await fetch(`https://api.waqi.info/feed/geo:${lon};${lat}/?token=${apiKey}`)
                             .then(
                                 response => response.json()
                             )
@@ -327,7 +325,7 @@ gpsButton.onclick = function() {
 
 
                     // Chiamata API OpenWeather
-                    await fetch("/.netlify/functions/lambda")
+                    await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiMeteo}`)
                             .then(
                                 response => response.json()
                             )
@@ -381,7 +379,7 @@ gpsButton.onclick = function() {
                                 }
                             )
                     };
-                    console.log(lat, lon, "in index.js");
+                    console.log(lat, lon);
                     geoLocation();
             }  
         );
