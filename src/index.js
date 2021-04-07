@@ -48,13 +48,10 @@ let description = document.body.getElementsByClassName("description")[0]; // Des
 async function checkAir() {
     
 let cityName = document.getElementById("cityName").value; // Valore casella ricerca I
-const city = {
-    value: cityName
-}
 // Chiamata API AICQN
 const response = await fetch("/.netlify/functions/lambda", {
     method: "POST",
-    body: JSON.stringify(city)
+    body: cityName
 })
 const result = await response.json()
 // console.log(response)

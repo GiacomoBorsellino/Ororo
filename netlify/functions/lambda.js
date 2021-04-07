@@ -3,7 +3,7 @@ const apiKey =  process.env.apiKey
 
 exports.handler = async (event) => {
 
-  const response = await fetch(`https://api.waqi.info/feed/${city.value}/?token=${apiKey}`)
+  const response = await fetch(`https://api.waqi.info/feed/${cityName}/?token=${apiKey}`)
   const result = await response.json() 
 
   const pass = (result) => {
