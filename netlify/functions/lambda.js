@@ -8,7 +8,7 @@ exports.handler = async event => {
   const pass = (response) => {
     return {
       statusCode: 200,
-      body: response
+      body: JSON.stringify(response)
     }
   }
 
