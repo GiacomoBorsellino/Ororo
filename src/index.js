@@ -52,10 +52,7 @@ let cityName = document.getElementById("cityName").value; // Valore casella rice
 // Chiamata API AICQN
 const response = await fetch("/.netlify/functions/lambda", {
                                 method: "POST",
-                                body: JSON.stringify(cityName),
-                                headers: {
-                                    'Content-Type': 'application/json'
-                                }
+                                body: JSON.stringify(cityName)
                             })
 const result = await response.json()
 // console.log(response)
