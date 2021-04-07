@@ -13,7 +13,7 @@ exports.handler = async event => {
     }
   }
 
-  return pass(data)
+  return pass(response)
 }
 
 // la restituzione si attiva? .()
