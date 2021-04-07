@@ -54,7 +54,7 @@ const response = await fetch("/.netlify/functions/lambda")
 const data = await response.json()
 const result = await data.data.aqi
 // console.log(response)
-console.log(result)
+console.log(data)
 
     .then(
         result => {
