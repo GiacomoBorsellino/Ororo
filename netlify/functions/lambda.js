@@ -1,9 +1,9 @@
 const fetch = require("node-fetch");
 const apiKey =  process.env.apiKey
 
-exports.handler = async (event, context) => {
+exports.handler = async (event) => {
 
-  const response = await fetch(`https://api.waqi.info/feed/${context.query.cityName}/?token=${apiKey}`)
+  const response = await fetch(`https://api.waqi.info/feed/${cityName}/?token=${apiKey}`)
   const result = await response.json() 
 
   const pass = (result) => {
