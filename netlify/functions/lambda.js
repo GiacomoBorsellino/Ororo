@@ -1,4 +1,5 @@
 const fetch = require("node-fetch");
+import cityName from "../../build/bundle"
 
 exports.handler = async event => {
   const apiKey =  process.env.apiKey
