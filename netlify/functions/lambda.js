@@ -1,5 +1,4 @@
 const fetch = require("node-fetch");
-let cityName = document.getElementById("cityName").value;
 
 exports.handler = async event => {
   const apiKey =  process.env.apiKey

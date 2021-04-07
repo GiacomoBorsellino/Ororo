@@ -47,17 +47,14 @@ let description = document.body.getElementsByClassName("description")[0]; // Des
 // 1) Funzione di chiamata manuale
 async function checkAir() {
     
-// let cityName = document.getElementById("cityName").value; // Valore casella ricerca I
+let cityName = document.getElementById("cityName").value; // Valore casella ricerca I
 
 // Chiamata API AICQN
 const response = await fetch("/.netlify/functions/lambda")
-const data = await response.json()
-const result = await data.data.aqi
+const result = await response.json()
 // console.log(response)
-console.log(data)
+console.log(result)
 
-    .then(
-        result => {
             console.log(result.data.iaqi.pm10.v)
             console.log(result.data.iaqi)
 
@@ -129,10 +126,9 @@ console.log(data)
                 description.innerHTML = `State air quality of the city not found, if you want know the air quality 
                 of the location nearest to you, please, click the gps button. If the problem persist, control your internet connection`;
             }
-        }
-    )
-    .catch( 
-        function(error) {
+        
+    
+
                 console.log(error.name, error.message);
                 document.body.getElementsByClassName("city")[0].innerHTML = `&nbsp;`
 
@@ -146,8 +142,8 @@ console.log(data)
                 state.style.backgroundColor = `white`;
                 description.innerHTML = `State air quality of the city not found, if you want know the air quality 
                 of the location nearest to you, please, click the gps button. If the problem persist, control your internet connection`;
-        }    
-    )
+        
+    
     
 // Chiamata API OpenWeather
 await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiMeteo}`)
