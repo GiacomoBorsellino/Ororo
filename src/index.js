@@ -15,6 +15,9 @@ import visibilit from './images/visibility.png';
 import win from './images/wind.png';
 import x from './images/x.png';
 
+import fetch from 'cross-fetch';
+
+
 
 // Pannelli descrittivi
 let sky = document.body.getElementsByClassName("sky")[0];
