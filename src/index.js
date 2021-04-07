@@ -45,7 +45,7 @@ let state = document.body.getElementsByClassName("state")[0]; // Stato dell'aria
 let description = document.body.getElementsByClassName("description")[0]; // Descrizione O
 
 // 1) Funzione di chiamata manuale
-(async function checkAir() {
+async function checkAir() {
     
 let cityName = document.getElementById("cityName").value; // Valore casella ricerca I
 
@@ -55,8 +55,7 @@ const data = await response.json()
 const result = await data.data.aqi
 // console.log(response)
 console.log(result)
-})()
-/*
+
     .then(
         result => {
             console.log(result.data.iaqi.pm10.v)
@@ -403,4 +402,3 @@ exit.onclick = function() {
     document.body.getElementsByClassName("details")[0].style.display = "none";
 }
 
-*/
