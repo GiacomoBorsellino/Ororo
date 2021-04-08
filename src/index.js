@@ -47,7 +47,9 @@ let cityName = document.getElementById("cityName").value; // Valore casella rice
 
 // Chiamata API AICQN
 const response = await fetch(`/.netlify/functions/lambda?cityName=${cityName}`)
+console.log(response)
 const result = await response.json()
+console.log(result)
 
 try {
     // Iniezione details
@@ -127,7 +129,7 @@ try {
     state.style.backgroundColor = `white`;
     description.innerHTML = `State air quality of the city not found, if you want know the air quality 
     of the location nearest to you, please, click the gps button.`; 
-    
+
     } else if (error instanceof NetworkError) {
     document.body.getElementsByClassName("city")[0].innerHTML = `&nbsp;`
 
