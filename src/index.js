@@ -110,7 +110,7 @@ try {
         state.innerHTML = `Not Found`;
         state.style.backgroundColor = `white`;
         description.innerHTML = `State air quality of the city not found, if you want know the air quality 
-        of the location nearest to you, please, click the gps button. If the problem persist, control your internet connection`;
+        of the location nearest to you, please, click the gps button.`;
     }
 
 } catch (error) { 
@@ -125,7 +125,7 @@ try {
     state.innerHTML = `Not Found`;
     state.style.backgroundColor = `white`;
     description.innerHTML = `State air quality of the city not found, if you want know the air quality 
-    of the location nearest to you, please, click the gps button. If the problem persist, control your internet connection`;            
+    of the location nearest to you, please, click the gps button.`;            
 }
     
     
@@ -280,7 +280,7 @@ gpsButton.onclick = function() {
                     state.innerHTML = `Not Found`;
                     state.style.backgroundColor = `white`;
                     description.innerHTML = `State air quality of the city not found, if you want know the air quality 
-                    of the location nearest to you, please, click the gps button. If the problem persist, control your internet connection`;
+                    of the location nearest to you, please, click the gps button.`;
                 }
                     // Chiamata API OpenWeather
                     const responseO = await fetch(`/.netlify/functions/omega?lon=${lon}&lat=${lat}`)
