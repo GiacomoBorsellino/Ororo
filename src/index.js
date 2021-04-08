@@ -114,7 +114,7 @@ try {
     }
 
 } catch (error) { 
-    if (error.message == "Network request failed") {
+    if (error instanceof TypeError) {
     document.body.getElementsByClassName("city")[0].innerHTML = `&nbsp;`
 
     no2.innerHTML = `NO<sub>2</sub>: Not available`;
@@ -127,7 +127,7 @@ try {
     state.style.backgroundColor = `red`;
     description.innerHTML = `State air quality of the city not found, if you want know the air quality 
     of the location nearest to you, please, click the gps button. If the problem persist, control your internet connection`;
-    } else {
+    } else if (error instanceof TypeError) {
     document.body.getElementsByClassName("city")[0].innerHTML = `&nbsp;`
 
     no2.innerHTML = `NO<sub>2</sub>: Not available`;
@@ -185,14 +185,14 @@ try {
     }
 
 } catch (error) {  
-    if (error.message == "Network request failed") {
+    if (error instanceof TypeError) {
         sky.innerHTML = `<img src="images/rain.png" alt="rain"/>Sky:</br> Not available`;
         pressure.innerHTML = `<img src="images/press.png" alt="pressure"/>Pressure:</br> Not available`;
         temperature.innerHTML = `<img src="images/temp.png" alt="temperature"/>Temperature</br> Not available`;
         humidity.innerHTML = `<img src="images/hum.png" alt="humidity"/>Humidity</br> Not available`;
         wind.innerHTML = `<img src="images/wind.png" alt="wind"/>Wind</br> Not available`;
         visibility.innerHTML = `<img src="images/visibility.png" alt="visibility"/>Visibility</br> Not available`;    
-    } else {
+    } else if (error instanceof TypeError) {
         sky.innerHTML = `<img src="images/rain.png" alt="rain"/>Sky:</br> Not available`;
         pressure.innerHTML = `<img src="images/press.png" alt="pressure"/>Pressure:</br> Not available`;
         temperature.innerHTML = `<img src="images/temp.png" alt="temperature"/>Temperature</br> Not available`;
