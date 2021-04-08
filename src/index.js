@@ -221,7 +221,7 @@ gpsButton.onclick = function() {
 
                     async function geoLocation() {
                     const response = await fetch(`/.netlify/functions/theta?lon=${lon}&lat=${lat}`)
-                    const result = response.json()
+                    const result = await response.json()
 
                 try {
                     // Iniezione details
