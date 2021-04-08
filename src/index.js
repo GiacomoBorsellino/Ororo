@@ -37,10 +37,6 @@ let pm25 = document.body.getElementsByClassName("pm25")[0];
 // Variabili di consumo
 let buttonLens = document.body.getElementsByClassName("primer")[0]; // Pulsante di ricerca
 
-// const apiKey = process.env.apiKey;
-// const apiMeteo = process.env.apiMeteo;
-
-
 let state = document.body.getElementsByClassName("state")[0]; // Stato dell'aria O
 let description = document.body.getElementsByClassName("description")[0]; // Descrizione O
 
@@ -118,8 +114,20 @@ try {
     }
 
 } catch (error) { 
-    console.log(error.name);
+    if (error.message == "Network request failed") {
+    document.body.getElementsByClassName("city")[0].innerHTML = `&nbsp;`
 
+    no2.innerHTML = `NO<sub>2</sub>: Not available`;
+    h.innerHTML = `H: Not available`;
+    o3.innerHTML = `O<sub>3</sub>:: Not available`;
+    pm10.innerHTML = `PM<sub>10</sub>:: Not available`;
+    pm25.innerHTML = `PM<sub>2.5</sub>:: Not available`;
+
+    state.innerHTML = `Offline`;
+    state.style.backgroundColor = `red`;
+    description.innerHTML = `State air quality of the city not found, if you want know the air quality 
+    of the location nearest to you, please, click the gps button. If the problem persist, control your internet connection`;
+    } else {
     document.body.getElementsByClassName("city")[0].innerHTML = `&nbsp;`
 
     no2.innerHTML = `NO<sub>2</sub>: Not available`;
@@ -131,7 +139,8 @@ try {
     state.innerHTML = `Not Found`;
     state.style.backgroundColor = `white`;
     description.innerHTML = `State air quality of the city not found, if you want know the air quality 
-    of the location nearest to you, please, click the gps button. If the problem persist, control your internet connection`;
+    of the location nearest to you, please, click the gps button. If the problem persist, control your internet connection`;            
+    }
 }
     
     
@@ -176,13 +185,21 @@ try {
     }
 
 } catch (error) {  
-    console.log(error.name);
-    sky.innerHTML = `<img src="images/rain.png" alt="rain"/>Sky:</br> Not available`;
-    pressure.innerHTML = `<img src="images/press.png" alt="pressure"/>Pressure:</br> Not available`;
-    temperature.innerHTML = `<img src="images/temp.png" alt="temperature"/>Temperature</br> Not available`;
-    humidity.innerHTML = `<img src="images/hum.png" alt="humidity"/>Humidity</br> Not available`;
-    wind.innerHTML = `<img src="images/wind.png" alt="wind"/>Wind</br> Not available`;
-    visibility.innerHTML = `<img src="images/visibility.png" alt="visibility"/>Visibility</br> Not available`;
+    if (error.message == "Network request failed") {
+        sky.innerHTML = `<img src="images/rain.png" alt="rain"/>Sky:</br> Not available`;
+        pressure.innerHTML = `<img src="images/press.png" alt="pressure"/>Pressure:</br> Not available`;
+        temperature.innerHTML = `<img src="images/temp.png" alt="temperature"/>Temperature</br> Not available`;
+        humidity.innerHTML = `<img src="images/hum.png" alt="humidity"/>Humidity</br> Not available`;
+        wind.innerHTML = `<img src="images/wind.png" alt="wind"/>Wind</br> Not available`;
+        visibility.innerHTML = `<img src="images/visibility.png" alt="visibility"/>Visibility</br> Not available`;    
+    } else {
+        sky.innerHTML = `<img src="images/rain.png" alt="rain"/>Sky:</br> Not available`;
+        pressure.innerHTML = `<img src="images/press.png" alt="pressure"/>Pressure:</br> Not available`;
+        temperature.innerHTML = `<img src="images/temp.png" alt="temperature"/>Temperature</br> Not available`;
+        humidity.innerHTML = `<img src="images/hum.png" alt="humidity"/>Humidity</br> Not available`;
+        wind.innerHTML = `<img src="images/wind.png" alt="wind"/>Wind</br> Not available`;
+        visibility.innerHTML = `<img src="images/visibility.png" alt="visibility"/>Visibility</br> Not available`;
+    }
 }
 };
 
