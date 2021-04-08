@@ -52,8 +52,10 @@ let cityName = document.getElementById("cityName").value; // Valore casella rice
 // Chiamata API AICQN
 const response = await fetch(`/.netlify/functions/lambda?cityName=${cityName}`)
 const result = await response.json()
-console.log("Okeis" + result)
-console.log("Errorone" + result.status)
+console.log(result)
+console.log("Errorone " + result.status)
+
+try {
     // Iniezione details
     if (result.data.iaqi.no2) {
         no2.innerHTML = `NO<sub>2</sub>: ${result.data.iaqi.no2.v} AQI`;
@@ -122,9 +124,11 @@ console.log("Errorone" + result.status)
         description.innerHTML = `State air quality of the city not found, if you want know the air quality 
         of the location nearest to you, please, click the gps button. If the problem persist, control your internet connection`;
     }
-        
+
+} catch (error) { 
     // Gestione errori
     console.log(error.name, error.message);
+
     document.body.getElementsByClassName("city")[0].innerHTML = `&nbsp;`
 
     no2.innerHTML = `NO<sub>2</sub>: Not available`;
@@ -137,7 +141,7 @@ console.log("Errorone" + result.status)
     state.style.backgroundColor = `white`;
     description.innerHTML = `State air quality of the city not found, if you want know the air quality 
     of the location nearest to you, please, click the gps button. If the problem persist, control your internet connection`;
-
+}
     
     
 // Chiamata API OpenWeather
