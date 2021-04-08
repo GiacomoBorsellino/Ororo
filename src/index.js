@@ -305,62 +305,56 @@ gpsButton.onclick = function() {
                     of the location nearest to you, please, click the gps button. If the problem persist, control your internet connection`;
                 }
                     // Chiamata API OpenWeather
-                    await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiMeteo}`)
-                            .then(
-                                response => response.json()
-                            )
-                            .then(
-                                result => {
-                                    document.body.getElementsByClassName("city")[0].innerHTML = result.name
-                                    if (result.weather[0].main) {
-                                        sky.innerHTML = `<img src="images/rain.png" alt="rain"/>Sky:</br>${result.weather[0].main}`;
-                                    } else if (result.weather.main) {
-                                        sky.innerHTML = `<img src="images/rain.png" alt="rain"/>Sky:</br>${result.weather.main}`;
-                                    } else if (result.weather) {
-                                        sky.innerHTML = `<img src="images/rain.png" alt="rain"/>Sky:</br> Not available`;
-                                    }
-                                    if (result.main.pressure) {
-                                        pressure.innerHTML = `<img src="images/press.png" alt="pressure"/>Pressure:</br>${result.main.pressure} hPa`;
-                                    } else {
-                                        pressure.innerHTML = `<img src="images/press.png" alt="pressure"/>Pressure:</br> Not available`;
-                                    }       
-                                    if (result.main.temp) {
-                                        let temp = result.main.temp; let kelvin = 273.15; let celsius = temp - kelvin;
-                                        temperature.innerHTML = `<img src="images/temp.png" alt="temperature"/>Temperature</br>${Math.round(celsius)} °C`;
-                                    } else {
-                                        temperature.innerHTML = `<img src="images/temp.png" alt="temperature"/>Temperature</br> Not available`;
-                                    }    
-                                    if (result.main.humidity) {
-                                        humidity.innerHTML = `<img src="images/hum.png" alt="humidity"/>Humidity</br>${result.main.humidity} %`;
-                                    } else {
-                                        humidity.innerHTML = `<img src="images/hum.png" alt="humidity"/>Humidity</br> Not available`;
-                                    }     
-                                    if (result.wind.speed) {
-                                        wind.innerHTML = `<img src="images/wind.png" alt="wind"/>Wind</br>${result.wind.speed} m/s`;
-                                    } else {
-                                        wind.innerHTML = `<img src="images/wind.png" alt="wind"/>Wind</br> Not available`;
-                                    }       
-                                    if (result.visibility) {
-                                        visibility.innerHTML = `<img src="images/visibility.png" alt="visibility"/>Visibility</br>${result.visibility} m`;
-                                    } else {
-                                        visibility.innerHTML = `<img src="images/visibility.png" alt="visibility"/>Visibility</br> Not available`;
-                                    }
-                                }
-                            )
-                            .catch(
-                                function(error) {
-                                        console.log(error.stack);
-                                        sky.innerHTML = `<img src="images/rain.png" alt="rain"/>Sky:</br> Not available`;
-                                        pressure.innerHTML = `<img src="images/press.png" alt="pressure"/>Pressure:</br> Not available`;
-                                        temperature.innerHTML = `<img src="images/temp.png" alt="temperature"/>Temperature</br> Not available`;
-                                        humidity.innerHTML = `<img src="images/hum.png" alt="humidity"/>Humidity</br> Not available`;
-                                        wind.innerHTML = `<img src="images/wind.png" alt="wind"/>Wind</br> Not available`;
-                                        visibility.innerHTML = `<img src="images/visibility.png" alt="visibility"/>Visibility</br> Not available`;
-                                }
-                            )
-                    };
-                    console.log(lat, lon);
-                    geoLocation();
+                    const responseO = await fetch(`/.netlify/functions/omega?lon=${lon}&lat=${lat}`)
+                    const resultO = await responseO.json()
+                    try {
+                        document.body.getElementsByClassName("city")[0].innerHTML = resultO.name
+
+                        if (resultO.weather[0].main) {
+                            sky.innerHTML = `<img src="images/rain.png" alt="rain"/>Sky:</br>${resultO.weather[0].main}`;
+                        } else if (resultO.weather.main) {
+                            sky.innerHTML = `<img src="images/rain.png" alt="rain"/>Sky:</br>${resultO.weather.main}`;
+                        } else if (resultO.weather) {
+                            sky.innerHTML = `<img src="images/rain.png" alt="rain"/>Sky:</br> Not available`;
+                        }
+                        if (resultO.main.pressure) {
+                            pressure.innerHTML = `<img src="images/press.png" alt="pressure"/>Pressure:</br>${resultO.main.pressure} hPa`;
+                        } else {
+                            pressure.innerHTML = `<img src="images/press.png" alt="pressure"/>Pressure:</br> Not available`;
+                        }       
+                        if (resultO.main.temp) {
+                            let temp = resultO.main.temp; let kelvin = 273.15; let celsius = temp - kelvin;
+                            temperature.innerHTML = `<img src="images/temp.png" alt="temperature"/>Temperature</br>${Math.round(celsius)} °C`;
+                        } else {
+                            temperature.innerHTML = `<img src="images/temp.png" alt="temperature"/>Temperature</br> Not available`;
+                        }    
+                        if (resultO.main.humidity) {
+                            humidity.innerHTML = `<img src="images/hum.png" alt="humidity"/>Humidity</br>${resultO.main.humidity} %`;
+                        } else {
+                            humidity.innerHTML = `<img src="images/hum.png" alt="humidity"/>Humidity</br> Not available`;
+                        }     
+                        if (resultO.wind.speed) {
+                            wind.innerHTML = `<img src="images/wind.png" alt="wind"/>Wind</br>${resultO.wind.speed} m/s`;
+                        } else {
+                            wind.innerHTML = `<img src="images/wind.png" alt="wind"/>Wind</br> Not available`;
+                        }       
+                        if (resultO.visibility) {
+                            visibility.innerHTML = `<img src="images/visibility.png" alt="visibility"/>Visibility</br>${resultO.visibility} m`;
+                        } else {
+                            visibility.innerHTML = `<img src="images/visibility.png" alt="visibility"/>Visibility</br> Not available`;
+                        }
+                    } catch (error) {
+                        console.log(error.stack);
+                        sky.innerHTML = `<img src="images/rain.png" alt="rain"/>Sky:</br> Not available`;
+                        pressure.innerHTML = `<img src="images/press.png" alt="pressure"/>Pressure:</br> Not available`;
+                        temperature.innerHTML = `<img src="images/temp.png" alt="temperature"/>Temperature</br> Not available`;
+                        humidity.innerHTML = `<img src="images/hum.png" alt="humidity"/>Humidity</br> Not available`;
+                        wind.innerHTML = `<img src="images/wind.png" alt="wind"/>Wind</br> Not available`;
+                        visibility.innerHTML = `<img src="images/visibility.png" alt="visibility"/>Visibility</br> Not available`;
+                    }
+                };
+            console.log(lat, lon);
+            geoLocation();
             }  
         );
     }
