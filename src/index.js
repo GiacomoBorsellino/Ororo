@@ -220,9 +220,9 @@ gpsButton.onclick = function() {
                     let lon = position.coords.longitude;
 
                     async function geoLocation() {
-                    const response = await fetch(`/.netlify/functions/theta?lon=${lon}?lat=${lat}`)
+                    const response = await fetch(`/.netlify/functions/theta?lon=${lon}&lat=${lat}`)
                     const result = response.json()
-                    
+
                 try {
                     // Iniezione details
                     if (result.data.iaqi.no2) {
