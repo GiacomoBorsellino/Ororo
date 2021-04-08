@@ -16,4 +16,3 @@ exports.handler = async (event) => {
   return pass(result)
 }
 
-// cityName da dove viene preso?
