@@ -52,8 +52,6 @@ let cityName = document.getElementById("cityName").value; // Valore casella rice
 // Chiamata API AICQN
 const response = await fetch(`/.netlify/functions/lambda?cityName=${cityName}`)
 const result = await response.json()
-console.log(result)
-console.log("Errorone " + result.status)
 
 try {
     // Iniezione details
@@ -85,35 +83,29 @@ try {
 
     // Stato dell'aria
     if (result.data.aqi < 50) {
-        // document.body.getElementsByClassName("city")[0].innerHTML = result.data.city.name;
         state.innerHTML = `Good`;                    
         state.style.backgroundColor = `#32a846`;
         description.innerHTML = `Air quality is considered satisfactory, and air pollution poses little or no risk.`;
     } else if (result.data.aqi > 51 && result.data.aqi < 100) {
-        // document.body.getElementsByClassName("city")[0].innerHTML = result.data.city.name;
         state.innerHTML = `Moderate`;  
         state.style.backgroundColor = `#cccc1f`;
         description.innerHTML = `Air quality is acceptable; however, for some pollutants there may be a moderate health 
                                     concern for a very small number of people who are unusually sensitive to air pollution.`;
     } else if (result.data.aqi > 101 && result.data.aqi < 150) {
-        // document.body.getElementsByClassName("city")[0].innerHTML = result.data.city.name;
         state.innerHTML = `Unhealthy for S.g.`;           
         state.style.backgroundColor = `#cc781f`;
         description.innerHTML = `Members of sensitive groups may experience health effects. The general public is not likely
                                     to be affected.`;
     } else if (result.data.aqi > 151 && result.data.aqi < 200) {
-        // document.body.getElementsByClassName("city")[0].innerHTML = result.data.city.name;
         state.innerHTML = `Unhealthy`;
         state.style.backgroundColor = `#cc1f64`;    
         description.innerHTML = `Everyone may begin to experience health effects; members of sensitive groups may experience 
                                     more serious health effects.`;
     } else if (result.data.aqi > 201 && result.data.aqi < 300) {
-        // document.body.getElementsByClassName("city")[0].innerHTML = result.data.city.name;
         state.innerHTML = `Very Unhealthy`;    
         state.style.backgroundColor = `#8d1fcc`;
         description.innerHTML = `Health warnings of emergency conditions. The entire population is more likely to be affected.`;
     } else if (result.data.aqi > 301) {
-        // document.body.getElementsByClassName("city")[0].innerHTML = result.data.city.name;
         state.innerHTML = `Hazardous`;
         state.style.backgroundColor = `#cc1f1f`;
         description.innerHTML = `Health alert: everyone may experience more serious health effects`;
@@ -126,7 +118,7 @@ try {
     }
 
 } catch (error) { 
-    console.log(error.name, error.message);
+    console.log(error.name);
 
     document.body.getElementsByClassName("city")[0].innerHTML = `&nbsp;`
 
@@ -146,8 +138,6 @@ try {
 // Chiamata API OpenWeather
 const responseO = await fetch(`/.netlify/functions/alfa?cityName=${cityName}`)
 const resultO = await responseO.json()
-console.log(resultO)
-console.log("Errorone " + resultO.status)
 
 try {
     document.body.getElementsByClassName("city")[0].innerHTML = resultO.name
@@ -186,7 +176,7 @@ try {
     }
 
 } catch (error) {  
-    console.log(error.stack, error.name, error.message);
+    console.log(error.name);
     sky.innerHTML = `<img src="images/rain.png" alt="rain"/>Sky:</br> Not available`;
     pressure.innerHTML = `<img src="images/press.png" alt="pressure"/>Pressure:</br> Not available`;
     temperature.innerHTML = `<img src="images/temp.png" alt="temperature"/>Temperature</br> Not available`;
@@ -252,18 +242,15 @@ gpsButton.onclick = function() {
                     }
 
                     if (result.data.aqi < 50) {
-                        // document.body.getElementsByClassName("city")[0].innerHTML = result.data.city.name;
                         state.innerHTML = `Good`;                    
                         state.style.backgroundColor = `#32a846`;
                         description.innerHTML = `Air quality is considered satisfactory, and air pollution poses little or no risk.`;
                     } else if (result.data.aqi > 51 && result.data.aqi < 100) {
-                        // document.body.getElementsByClassName("city")[0].innerHTML = result.data.city.name;
                         state.innerHTML = `Moderate`;  
                         state.style.backgroundColor = `#cccc1f`;
                         description.innerHTML = `Air quality is acceptable; however, for some pollutants there may be a moderate health 
                                                     concern for a very small number of people who are unusually sensitive to air pollution.`;
                     } else if (result.data.aqi > 101 && result.data.aqi < 150) {
-                        // document.body.getElementsByClassName("city")[0].innerHTML = result.data.city.name;
                         state.innerHTML = `Unhealthy for S.g.`;           
                         state.style.backgroundColor = `#cc781f`;
                         description.innerHTML = `Members of sensitive groups may experience health effects. The general public is not likely
@@ -290,7 +277,7 @@ gpsButton.onclick = function() {
                     }
 
                 } catch (error) {               
-                    console.log(error.name, error.message);
+                    console.log(error.name);
 
                     no2.innerHTML = `NO<sub>2</sub>: Not available`;
                     h.innerHTML = `H: Not available`;
@@ -344,7 +331,7 @@ gpsButton.onclick = function() {
                             visibility.innerHTML = `<img src="images/visibility.png" alt="visibility"/>Visibility</br> Not available`;
                         }
                     } catch (error) {
-                        console.log(error.stack);
+                        console.log(error.name);
                         sky.innerHTML = `<img src="images/rain.png" alt="rain"/>Sky:</br> Not available`;
                         pressure.innerHTML = `<img src="images/press.png" alt="pressure"/>Pressure:</br> Not available`;
                         temperature.innerHTML = `<img src="images/temp.png" alt="temperature"/>Temperature</br> Not available`;
