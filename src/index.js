@@ -194,10 +194,6 @@ try {
 }
 };
 
-if (!checkAir()) {
-    console.log("bad")
-}
-
 buttonLens.onclick = checkAir;
 
 // Tasto invio
