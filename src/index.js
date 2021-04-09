@@ -119,7 +119,7 @@ try {
     }
 
 } catch (error) { 
-    if (error instanceof TypeError) {
+    if (error == ReferenceError) {
     document.body.getElementsByClassName("city")[0].innerHTML = `&nbsp;`
 
     no2.innerHTML = `NO<sub>2</sub>: Not available`;
@@ -133,7 +133,7 @@ try {
     description.innerHTML = `State air quality of the city not found, if you want know the air quality 
     of the location nearest to you, please, click the gps button.`; 
 
-    } else if (error instanceof NetworkError) {
+    } else if (error == new TypeError("Network request failed")) {
     document.body.getElementsByClassName("city")[0].innerHTML = `&nbsp;`
 
     no2.innerHTML = `NO<sub>2</sub>: Not available`;
