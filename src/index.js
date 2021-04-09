@@ -175,7 +175,7 @@ buttonLens.onclick = checkAir;
 document.addEventListener('keydown', function(event) {
         if (event.code == 'Enter') {
             event.preventDefault();
-            buttonLens.click();
+            // buttonLens.click();
             checkAir();
         }
     }
