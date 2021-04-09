@@ -30,8 +30,8 @@ let pm25 = document.body.getElementsByClassName("pm25")[0];
 
 // Variabili di consumo
 let buttonLens = document.body.getElementsByClassName("primer")[0]; // Pulsante di ricerca
-let state = document.body.getElementsByClassName("state")[0]; // Stato dell'aria O
-let description = document.body.getElementsByClassName("description")[0]; // Descrizione O
+let state = document.body.getElementsByClassName("state")[0]; // Stato dell'aria 0
+let description = document.body.getElementsByClassName("description")[0]; // Descrizione 0
 const apiKey = process.env.apiKey;
 const apiMeteo = process.env.apiMeteo;
 
