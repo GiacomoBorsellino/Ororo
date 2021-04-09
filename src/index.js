@@ -113,7 +113,6 @@ try {
     }
 
 } catch (error) { 
-    if (error == ReferenceError) {
     document.body.getElementsByClassName("city")[0].innerHTML = `&nbsp;`
 
     no2.innerHTML = `NO<sub>2</sub>: Not available`;
@@ -125,22 +124,7 @@ try {
     state.innerHTML = `Not Found`;
     state.style.backgroundColor = `white`;
     description.innerHTML = `State air quality of the city not found, if you want know the air quality 
-    of the location nearest to you, please, click the gps button.`; 
-
-    } else if (error == new TypeError("Network request failed")) {
-    document.body.getElementsByClassName("city")[0].innerHTML = `&nbsp;`
-
-    no2.innerHTML = `NO<sub>2</sub>: Not available`;
-    h.innerHTML = `H: Not available`;
-    o3.innerHTML = `O<sub>3</sub>:: Not available`;
-    pm10.innerHTML = `PM<sub>10</sub>:: Not available`;
-    pm25.innerHTML = `PM<sub>2.5</sub>:: Not available`;
-
-    state.innerHTML = `Offline`;
-    state.style.backgroundColor = `red`;
-    description.innerHTML = `State air quality of the city not found, if you want know the air quality 
-    of the location nearest to you, please, click the gps button.`; 
-    }           
+    of the location nearest to you, please, click the gps button.`;        
 }
     
     
