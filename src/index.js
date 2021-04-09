@@ -36,7 +36,6 @@ let pm25 = document.body.getElementsByClassName("pm25")[0];
 
 // Variabili di consumo
 let buttonLens = document.body.getElementsByClassName("primer")[0]; // Pulsante di ricerca
-
 let state = document.body.getElementsByClassName("state")[0]; // Stato dell'aria O
 let description = document.body.getElementsByClassName("description")[0]; // Descrizione O
 
@@ -46,14 +45,13 @@ async function checkAir() {
 let cityName = document.getElementById("cityName").value; // Valore casella ricerca I
 
 // Chiamata API AICQN
+try {
 const response = await fetch(`/.netlify/functions/lambda?cityName=${cityName}`)
-console.log(response)
-
-const result = await response.json()
-console.log(result)
-if (!result) {
+} catch (error) {
     console.log("bad")
 }
+const result = await response.json()
+
 try {
     // Iniezione details
     if (result.data.iaqi.no2) {
