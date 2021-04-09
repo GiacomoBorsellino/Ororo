@@ -175,7 +175,7 @@ buttonLens.onclick = checkAir;
 
 // Tasto invio
 document.addEventListener('keydown', function(event) {
-        if (event.code == 'Enter' || event.key == 13) {
+        if (event.code == 'Enter' || event.key == 13 || event.key == Enter || event.code == Enter) {
             event.preventDefault();
             checkAir();
         }
