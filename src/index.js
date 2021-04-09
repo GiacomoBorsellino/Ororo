@@ -1,8 +1,6 @@
 // Import elements
 import "./style.css";
-
 import background from './images/background.png';
-
 import gps from './images/gps.png';
 import hum from './images/hum.png';
 import inf from './images/info.png';
@@ -14,10 +12,7 @@ import temp from './images/temp.png';
 import visibilit from './images/visibility.png';
 import win from './images/wind.png';
 import x from './images/x.png';
-
 import fetch from 'cross-fetch';
-
-
 
 // Pannelli descrittivi
 let sky = document.body.getElementsByClassName("sky")[0];
@@ -80,36 +75,32 @@ try {
     if (result.data.aqi < 50) {
         state.innerHTML = `Good`;                    
         state.style.backgroundColor = `#32a846`;
-        description.innerHTML = `Air quality is considered satisfactory, and air pollution poses little or no risk.`;
+        description.innerHTML = `Air quality is considered satisfactory, and air pollution poses little or no risk.</br>&nbsp;`;
     } else if (result.data.aqi > 51 && result.data.aqi < 100) {
         state.innerHTML = `Moderate`;  
         state.style.backgroundColor = `#cccc1f`;
-        description.innerHTML = `Air quality is acceptable; however, for some pollutants there may be a moderate health 
-                                    concern for a very small number of people who are unusually sensitive to air pollution.`;
+        description.innerHTML = `Air quality is acceptable; however, for some pollutants there may be a moderate health concern for a very small number of people who are unusually sensitive to air pollution.`;
     } else if (result.data.aqi > 101 && result.data.aqi < 150) {
         state.innerHTML = `Unhealthy for S.g.`;           
         state.style.backgroundColor = `#cc781f`;
-        description.innerHTML = `Members of sensitive groups may experience health effects. The general public is not likely
-                                    to be affected.`;
+        description.innerHTML = `Members of sensitive groups may experience health effects. The general public is not likely to be affected.</br>&nbsp;`;
     } else if (result.data.aqi > 151 && result.data.aqi < 200) {
         state.innerHTML = `Unhealthy`;
         state.style.backgroundColor = `#cc1f64`;    
-        description.innerHTML = `Everyone may begin to experience health effects; members of sensitive groups may experience 
-                                    more serious health effects.`;
+        description.innerHTML = `Everyone may begin to experience health effects; members of sensitive groups may experience more serious health effects.</br>&nbsp;`;
     } else if (result.data.aqi > 201 && result.data.aqi < 300) {
         state.innerHTML = `Very Unhealthy`;    
         state.style.backgroundColor = `#8d1fcc`;
-        description.innerHTML = `Health warnings of emergency conditions. The entire population is more likely to be affected.`;
+        description.innerHTML = `Health warnings of emergency conditions. The entire population is more likely to be affected.</br>&nbsp;`;
     } else if (result.data.aqi > 301) {
         state.innerHTML = `Hazardous`;
         state.style.backgroundColor = `#cc1f1f`;
-        description.innerHTML = `Health alert: everyone may experience more serious health effects`;
+        description.innerHTML = `Health alert: everyone may experience more serious health effects</br>&nbsp;`;
     } else if (result.data.aqi === undefined) {
         document.body.getElementsByClassName("city")[0].innerHTML = `&nbsp;`
         state.innerHTML = `Not Found`;
         state.style.backgroundColor = `white`;
-        description.innerHTML = `State air quality of the city not found, if you want know the air quality 
-        of the location nearest to you, please, click the gps button.`;
+        description.innerHTML = `State air quality of the city not found, if you want know the air quality of the location nearest to you, please, click the gps button.`;
     }
 
 } catch (error) { 
@@ -236,30 +227,27 @@ gpsButton.onclick = function() {
                     if (result.data.aqi < 50) {
                         state.innerHTML = `Good`;                    
                         state.style.backgroundColor = `#32a846`;
-                        description.innerHTML = `Air quality is considered satisfactory, and air pollution poses little or no risk.`;
+                        description.innerHTML = `Air quality is considered satisfactory, and air pollution poses little or no risk.</br>&nbsp;`;
                     } else if (result.data.aqi > 51 && result.data.aqi < 100) {
                         state.innerHTML = `Moderate`;  
                         state.style.backgroundColor = `#cccc1f`;
-                        description.innerHTML = `Air quality is acceptable; however, for some pollutants there may be a moderate health 
-                                                    concern for a very small number of people who are unusually sensitive to air pollution.`;
+                        description.innerHTML = `Air quality is acceptable; however, for some pollutants there may be a moderate health concern for a very small number of people who are unusually sensitive to air pollution.`;
                     } else if (result.data.aqi > 101 && result.data.aqi < 150) {
                         state.innerHTML = `Unhealthy for S.g.`;           
                         state.style.backgroundColor = `#cc781f`;
-                        description.innerHTML = `Members of sensitive groups may experience health effects. The general public is not likely
-                                                    to be affected.`;
+                        description.innerHTML = `Members of sensitive groups may experience health effects. The general public is not likely to be affected.</br>&nbsp;`;
                     } else if (result.data.aqi > 151 && result.data.aqi < 200) {
                         state.innerHTML = `Unhealthy`;
                         state.style.backgroundColor = `#cc1f64`;    
-                        description.innerHTML = `Everyone may begin to experience health effects; members of sensitive groups may experience 
-                                                    more serious health effects.`;
+                        description.innerHTML = `Everyone may begin to experience health effects; members of sensitive groups may experience more serious health effects.</br>&nbsp;`;
                     } else if (result.data.aqi > 201 && result.data.aqi < 300) {
                         state.innerHTML = `Very Unhealthy`;    
                         state.style.backgroundColor = `#8d1fcc`;
-                        description.innerHTML = `Health warnings of emergency conditions. The entire population is more likely to be affected.`;
+                        description.innerHTML = `Health warnings of emergency conditions. The entire population is more likely to be affected.</br>&nbsp;`;
                     } else if (result.data.aqi > 301) {
                         state.innerHTML = `Hazardous`;
                         state.style.backgroundColor = `#cc1f1f`;
-                        description.innerHTML = `Health alert: everyone may experience more serious health effects`;
+                        description.innerHTML = `Health alert: everyone may experience more serious health effects</br>&nbsp;`;
                     } else if (result.data.aqi === undefined) {
                         document.body.getElementsByClassName("city")[0].innerHTML = `&nbsp;`
                         state.innerHTML = `Not Found`;
