@@ -45,12 +45,7 @@ async function checkAir() {
 let cityName = document.getElementById("cityName").value; // Valore casella ricerca I
 
 // Chiamata API AICQN
-try {
 const response = await fetch(`/.netlify/functions/lambda?cityName=${cityName}`)
-return response
-} catch (error) {
-    console.log("bad")
-}
 const result = await response.json()
 
 try {
@@ -198,6 +193,10 @@ try {
     visibility.innerHTML = `<img src="images/visibility.png" alt="visibility"/>Visibility</br> Not available`;
 }
 };
+
+if (!checkAir()) {
+    console.log("bad")
+}
 
 buttonLens.onclick = checkAir;
 
