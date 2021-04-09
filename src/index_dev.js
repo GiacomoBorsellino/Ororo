@@ -110,9 +110,9 @@ try {
 
     no2.innerHTML = `NO<sub>2</sub>: Not available`;
     h.innerHTML = `H: Not available`;
-    o3.innerHTML = `O<sub>3</sub>:: Not available`;
-    pm10.innerHTML = `PM<sub>10</sub>:: Not available`;
-    pm25.innerHTML = `PM<sub>2.5</sub>:: Not available`;
+    o3.innerHTML = `O<sub>3</sub>: Not available`;
+    pm10.innerHTML = `PM<sub>10</sub>: Not available`;
+    pm25.innerHTML = `PM<sub>2.5</sub>: Not available`;
 
     state.innerHTML = `Not Found`;
     state.style.backgroundColor = `white`;
