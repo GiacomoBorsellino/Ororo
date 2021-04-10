@@ -1,9 +1,7 @@
-[![Contributors][contributors-shield]][contributors-url]
-[![Issues][issues-shield]][issues-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+[![Contributors][contributors-shield]][https://github.com/GiacomoBorsellino/Ororo]
+[![Issues][issues-shield]][https://github.com/GiacomoBorsellino/Ororo]
+[![MIT License][license-shield]][https://github.com/GiacomoBorsellino/Ororo/blob/main/LICENSE]
+[![LinkedIn][linkedin-shield]][lhttps://www.linkedin.com/in/giacomo-borsellino-4039071b7/]
 
 <br />
 <p align="center">
