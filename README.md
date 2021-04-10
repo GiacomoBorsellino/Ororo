@@ -67,7 +67,7 @@ N.b. É possibile che certe località dispongano dello stato meteorologico e non
 2. Entra nella cartella
 
    ```sh
-   Cd nella cartella
+   Cd ororo
    ```
 
 3. Installa NPM
@@ -80,6 +80,7 @@ N.b. É possibile che certe località dispongano dello stato meteorologico e non
 4. Cambia file .env.example in .env e inserisci le tue keys
    (Le API richiedono 2 keys per funzionare.)
 [Air Quality Open Data Platform](https://aqicn.org/data-platform/token/#/)
+
 [Open Weather](https://home.openweathermap.org/)
 
 5. Crea la build
