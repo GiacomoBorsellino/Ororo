@@ -22,24 +22,24 @@
 <details open="open">
   <summary><h2 style="display: inline-block">Indice</h2></summary>
   <ol>
-    <li><a href="#prerequisites">Tecnologie/Argomenti</a></li>
-    <li><a href="#installation">API e utilizzo</a></li>
-    <li><a href="#installation">Prerequisiti</a></li>
-    <li><a href="#installation">Installazione</a></li>
-    <li><a href="#installation">Contatti</a></li>
+    <li><a href="#Tecnologie/Argomenti">Tecnologie/Argomenti</a></li>
+    <li><a href="#API e utilizzo">API e utilizzo</a></li>
+    <li><a href="#Prerequisiti">Prerequisiti</a></li>
+    <li><a href="#Installazione">Installazione</a></li>
+    <li><a href="#Contatti">Contatti</a></li>
   </ol>
 </details>
 
 ### Tecnologie/Argomenti
 
-* [HTML5]
-* [CSS]
-* [Javascript]
-* [Webpack]
-* [NPM]
-* [dotenv]
-* [API]
-* [Environment&nbsp;variable]
+* HTML5
+* CSS
+* Javascript
+* Webpack
+* NPM
+* dotenv
+* API
+* Environment&nbsp;variable
 
 ## API e utilizzo
 Per la creazione di Ororo ho utilizzato 2 API: 
@@ -58,7 +58,7 @@ N.b. É possibile che certe località dispongano dello stato meteorologico e non
 
 ### Prerequisiti
 
-* Installare l'ambiente Node.js per poter amministrare gli npm
+* Installare l'ambiente Node.js per poter amministrare npm
 * Git CLI
 
 ### Installazione
@@ -82,7 +82,8 @@ N.b. É possibile che certe località dispongano dello stato meteorologico e non
    npm install 
    ```
 
-4. Cambia file .env.example in .env e inserisci le tue keys*
+4. Cambia file .env.example in .env e inserisci le tue keys
+   (Le API richiedono 2 keys per funzionare.)
 [Air Quality Open Data Platform](https://aqicn.org/data-platform/token/#/)
 [Open Weather](https://home.openweathermap.org/)
 
@@ -98,7 +99,6 @@ N.b. É possibile che certe località dispongano dello stato meteorologico e non
    npm run dev
    ```
 
-* Le API richiedono 2 keys per funzionare.
 
 ## Licenza
 
