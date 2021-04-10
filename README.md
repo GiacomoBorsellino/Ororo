@@ -24,7 +24,7 @@
   </ol>
 </details>
 
-### Tecnologie/Argomenti
+## Tecnologie/Argomenti
 
 * HTML5
 * CSS
@@ -35,7 +35,7 @@
 * API
 * Environment&nbsp;variables
 
-### API e utilizzo
+## API e utilizzo
 Per la creazione di Ororo ho utilizzato 2 API: 
 la AQICN e la OpenWeather.
 
@@ -51,12 +51,12 @@ o provarla in modalità dev, seguendo la sezione Installazione
 
 N.b. É possibile che certe località dispongano dello stato meteorologico e non di quello dell'aria.
 
-### Prerequisiti
+## Prerequisiti
 
 * Installare l'ambiente Node.js per poter amministrare npm
 * Git CLI
 
-### Installazione
+## Installazione
 
 1. Clona il repository
 
