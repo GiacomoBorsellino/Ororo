@@ -45,14 +45,14 @@
 Per la creazione di Ororo ho utilizzato 2 API: 
 la AQICN e la OpenWeather.
 
-La prima estrapola le informazioni relative lo stato dell'aria, definendo la presenza di particolato nocivo
+La prima estrapola le informazioni relative lo stato dell'aria, definendo la presenza di particolato nocivo.
 La seconda restituisce parametri quali temperatura, pressione, umidità, ecc...
 
 L'uso è semplice: basta inserire il nome di una città, o cliccare sul tasto gps, per avere informazioni su questi parametri.
 Se la città non è corretta o non esiste un disclaimer avvertirà dell'errore.
 
 É possibile provare l'app in modalità produzione a questo link: https://ororo-giacomo-borsellino.netlify.app/
-O provarla in modalità dev, seguendo la sezione Installazione
+o provarla in modalità dev, seguendo la sezione Installazione
 
 N.b. É possibile che certe località dispongano dello stato meteorologico e non di quello dell'aria.
 
@@ -117,14 +117,13 @@ Profilo Linkedin: [Linkedin](https://www.linkedin.com/in/giacomo-borsellino-4039
 
 
 [contributors-shield]: https://img.shields.io/github/contributors/fabio-mancin/city-pollution?style=for-the-badge
-[contributors-url]: https://github.com/fabio-mancin/city-pollution/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/fabio-mancin/city-pollution?style=for-the-badge
-[forks-url]: https://github.com/fabio-mancin/city-pollution/network/members
-[stars-shield]: https://img.shields.io/github/stars/fabio-mancin/city-pollution?style=for-the-badge
-[stars-url]: https://github.com/fabio-mancin/city-pollution/stargazers
-[issues-shield]: https://img.shields.io/github/issues/fabio-mancin/city-pollution?style=for-the-badge
-[issues-url]: https://github.com/fabio-mancin/city-pollution/issues
-[license-shield]: https://img.shields.io/github/license/fabio-mancin/city-pollution?style=for-the-badge
-[license-url]: https://github.com/fabio-mancin/repo/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[contributors-url]: https://github.com/GiacomoBorsellino/Ororo/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/GiacomoBorsellino/Ororo?style=for-the-badge
+[forks-url]: https://github.com/GiacomoBorsellino/Ororo/network/members
+[stars-shield]: https://img.shields.io/github/stars/GiacomoBorsellino/Ororo?style=for-the-badge
+[stars-url]: https://github.com/GiacomoBorsellino/Ororo/stargazers
+[issues-shield]: https://img.shields.io/github/issues/GiacomoBorsellino/Ororo?style=for-the-badge
+[issues-url]: https://github.com/GiacomoBorsellino/Ororo/issues
+[license-shield]: https://img.shields.io/github/license/GiacomoBorsellino/Ororo?style=for-the-badge
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedincolorB=555
 [linkedin-url]: https://www.linkedin.com/in/giacomo-borsellino-4039071b7/
