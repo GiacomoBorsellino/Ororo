@@ -40,10 +40,11 @@ Per la creazione di Ororo ho utilizzato 2 API:
 la AQICN e la OpenWeather.
 
 La prima estrapola le informazioni relative lo stato dell'aria, definendo la presenza di particolato nocivo.
+
 La seconda restituisce parametri quali temperatura, pressione, umidità, ecc...
 
 L'uso è semplice: basta inserire il nome di una città, o cliccare sul tasto gps, per avere informazioni su questi parametri.
-Se la città non è corretta o non esiste un disclaimer avvertirà dell'errore.
+Se la città non è corretta o non esiste, un disclaimer avvertirà dell'errore.
 
 É possibile provare l'app in modalità produzione a questo link: https://ororo-giacomo-borsellino.netlify.app/
 o provarla in modalità dev, seguendo la sezione Installazione
