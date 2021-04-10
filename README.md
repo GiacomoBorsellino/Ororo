@@ -16,8 +16,8 @@
 <details open="open">
   <summary><h2 style="display: inline-block">Indice</h2></summary>
   <ol>
-    <li><a href="#tecnologie">Tecnologie/Argomenti</a></li>
-    <li><a href="#api">API e utilizzo</a></li>
+    <li><a href="#Argomenti">Tecnologie/Argomenti</a></li>
+    <li><a href="#utilizzo">API e utilizzo</a></li>
     <li><a href="#prerequisiti">Prerequisiti</a></li>
     <li><a href="#installazione">Installazione</a></li>
     <li><a href="#contatti">Contatti</a></li>
