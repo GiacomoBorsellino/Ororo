@@ -1,7 +1,3 @@
-[![Contributors][contributors-shield]][https://github.com/GiacomoBorsellino/Ororo]
-[![Issues][issues-shield]][https://github.com/GiacomoBorsellino/Ororo]
-[![MIT License][license-shield]][https://github.com/GiacomoBorsellino/Ororo/blob/main/LICENSE]
-[![LinkedIn][linkedin-shield]][lhttps://www.linkedin.com/in/giacomo-borsellino-4039071b7/]
 
 <br />
 <p align="center">
