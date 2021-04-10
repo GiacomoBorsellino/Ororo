@@ -102,7 +102,7 @@ Distribuito con licenza MIT
 
 Giacomo Borsellino - giacomoborsellino at gmail dot it
 
-Profilo Linkedin: [Linkedin](https://www.linkedin.com/in/giacomo-borsellino-4039071b7/)
+Profilo Linkedin, per collaborazioni o proposte di lavoro: [Linkedin](https://www.linkedin.com/in/giacomo-borsellino-4039071b7/)
 
 Link all'app: [Ororo](https://ororo-giacomo-borsellino.netlify.app/)
 
