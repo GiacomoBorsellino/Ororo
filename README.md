@@ -114,16 +114,3 @@ Profilo Linkedin: [Linkedin](https://www.linkedin.com/in/giacomo-borsellino-4039
 * [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
 * [Air Pollution: Real-time Air Quality Index (AQI)](https://aqicn.org/)
 * [Open Weather](https://home.openweathermap.org/)
-
-
-[contributors-shield]: https://img.shields.io/github/contributors/GiacomoBorsellino/Ororo?style=for-the-badge
-[contributors-url]: https://github.com/GiacomoBorsellino/Ororo/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/GiacomoBorsellino/Ororo?style=for-the-badge
-[forks-url]: https://github.com/GiacomoBorsellino/Ororo/network/members
-[stars-shield]: https://img.shields.io/github/stars/GiacomoBorsellino/Ororo?style=for-the-badge
-[stars-url]: https://github.com/GiacomoBorsellino/Ororo/stargazers
-[issues-shield]: https://img.shields.io/github/issues/GiacomoBorsellino/Ororo?style=for-the-badge
-[issues-url]: https://github.com/GiacomoBorsellino/Ororo/issues
-[license-shield]: https://img.shields.io/github/license/GiacomoBorsellino/Ororo?style=for-the-badge
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedincolorB=555
-[linkedin-url]: https://www.linkedin.com/in/giacomo-borsellino-4039071b7/
