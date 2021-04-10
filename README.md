@@ -104,7 +104,7 @@ Giacomo Borsellino - giacomoborsellino at gmail dot it
 
 Profilo Linkedin: [Linkedin](https://www.linkedin.com/in/giacomo-borsellino-4039071b7/)
 
-
+Link all'app: [Ororo](https://ororo-giacomo-borsellino.netlify.app/)
 
 ## Crediti
 
