@@ -99,7 +99,6 @@ N.b. É possibile che certe località dispongano dello stato meteorologico e non
    npm run dev
    ```
 
-
 ## Licenza
 
 Distribuito con licenza MIT
@@ -110,7 +109,7 @@ Giacomo Borsellino - giacomoborsellino at gmail dot it
 
 Profilo Linkedin: [Linkedin](https://www.linkedin.com/in/giacomo-borsellino-4039071b7/)
 
-## Acknowledgements
+## Crediti
 
 * [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
 * [Air Pollution: Real-time Air Quality Index (AQI)](https://aqicn.org/)
