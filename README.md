@@ -8,7 +8,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/GiacomoBorsellino/Ororo">
-    <img src="/build/images/ororo-logo.png" alt="Logo" width="100">
+    <img src="/build/images/ororo-logo.png" alt="Logo" width="200">
   </a>
 
   <h3 align="center">Ororo</h3>
