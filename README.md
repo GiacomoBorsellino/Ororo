@@ -17,7 +17,7 @@
   <summary><h2 style="display: inline-block">Indice</h2></summary>
   <ol>
     <li><a href="#Tecnologie/Argomenti">Tecnologie/Argomenti</a></li>
-    <li><a href="#API e utilizzo">API e utilizzo</a></li>
+    <li><a href="#APIeutilizzo">API e utilizzo</a></li>
     <li><a href="#Prerequisiti">Prerequisiti</a></li>
     <li><a href="#Installazione">Installazione</a></li>
     <li><a href="#Contatti">Contatti</a></li>
@@ -33,7 +33,7 @@
 * NPM
 * dotenv
 * API
-* Environment&nbsp;variable
+* Environment&nbsp;variables
 
 ## API e utilizzo
 Per la creazione di Ororo ho utilizzato 2 API: 
