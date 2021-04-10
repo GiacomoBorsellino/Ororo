@@ -16,11 +16,11 @@
 <details open="open">
   <summary><h2 style="display: inline-block">Indice</h2></summary>
   <ol>
-    <li><a href="#Tecnologie/Argomenti">Tecnologie/Argomenti</a></li>
-    <li><a href="#APIeutilizzo">API e utilizzo</a></li>
-    <li><a href="#Prerequisiti">Prerequisiti</a></li>
-    <li><a href="#Installazione">Installazione</a></li>
-    <li><a href="#Contatti">Contatti</a></li>
+    <li><a href="#tecnologie">Tecnologie/Argomenti</a></li>
+    <li><a href="#api">API e utilizzo</a></li>
+    <li><a href="#prerequisiti">Prerequisiti</a></li>
+    <li><a href="#installazione">Installazione</a></li>
+    <li><a href="#contatti">Contatti</a></li>
   </ol>
 </details>
 
@@ -35,7 +35,7 @@
 * API
 * Environment&nbsp;variables
 
-## API e utilizzo
+### API e utilizzo
 Per la creazione di Ororo ho utilizzato 2 API: 
 la AQICN e la OpenWeather.
 
