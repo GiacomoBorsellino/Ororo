@@ -176,6 +176,7 @@ document.addEventListener('keydown', function(event) {
         if (event.code == 'Enter' || event.key == 13 || event.key == 'Enter' || event.keyCode == 13) {
             event.preventDefault();
             checkAir();
+            event.target.blur()
         }
     }
 );
