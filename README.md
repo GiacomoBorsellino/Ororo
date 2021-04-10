@@ -116,7 +116,7 @@ Profilo Linkedin: [Linkedin](https://www.linkedin.com/in/giacomo-borsellino-4039
 * [Open Weather](https://home.openweathermap.org/)
 
 
-[contributors-shield]: https://img.shields.io/github/contributors/fabio-mancin/city-pollution?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/GiacomoBorsellino/Ororo?style=for-the-badge
 [contributors-url]: https://github.com/GiacomoBorsellino/Ororo/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/GiacomoBorsellino/Ororo?style=for-the-badge
 [forks-url]: https://github.com/GiacomoBorsellino/Ororo/network/members
