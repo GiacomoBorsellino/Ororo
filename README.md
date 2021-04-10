@@ -8,7 +8,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/GiacomoBorsellino/Ororo">
-    <img src="../build/images/ororo-logo.png" alt="Logo" width="100" height="100">
+    <img src="/build/images/ororo-logo.png" alt="Logo" width="100" height="100">
   </a>
 
   <h3 align="center">Ororo</h3>
@@ -128,4 +128,4 @@ Profilo Linkedin: [Linkedin](https://www.linkedin.com/in/giacomo-borsellino-4039
 [license-shield]: https://img.shields.io/github/license/fabio-mancin/city-pollution?style=for-the-badge
 [license-url]: https://github.com/fabio-mancin/repo/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/fabio-mancin
+[linkedin-url]: https://www.linkedin.com/in/giacomo-borsellino-4039071b7/
