@@ -47,7 +47,7 @@ L'uso è semplice: basta inserire il nome di una città, o cliccare sul tasto gp
 Se la città non è corretta o non esiste, un disclaimer avvertirà dell'errore.
 
 É possibile provare l'app in modalità produzione a questo link: https://ororo-giacomo-borsellino.netlify.app/
-o provarla in modalità dev, seguendo la sezione Installazione
+o provarla in modalità dev, seguendo la sezione <a href="#installazione">Installazione</a>
 
 N.b. É possibile che certe località dispongano dello stato meteorologico e non di quello dell'aria.
 
@@ -103,6 +103,8 @@ Distribuito con licenza MIT
 Giacomo Borsellino - giacomoborsellino at gmail dot it
 
 Profilo Linkedin: [Linkedin](https://www.linkedin.com/in/giacomo-borsellino-4039071b7/)
+
+
 
 ## Crediti
 
