@@ -9,7 +9,9 @@
 
   <p align="center">
     Ororo è una single page application creata con lo scopo di dare informazioni relative lo stato dell'aria (AQI) e lo stato meteorologico di una determinata zona/città.
-
+  </p>
+    <p align="center">
+    <img src="https://raw.githubusercontent.com/GiacomoBorsellino/ororo/main/images/Immagine.png" alt="screenshot" width="80%">
   </p>
 </p>
 
